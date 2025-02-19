@@ -1,3 +1,6 @@
+import os
+os.system("pip install -r requirement.txt")
+
 import streamlit as st
 from model_helper import predict
 
