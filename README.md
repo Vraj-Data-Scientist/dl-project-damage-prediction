@@ -43,20 +43,16 @@ dl-project-damage-prediction/
 └── README.md                 # Project documentation
 ```
 
-## 3. Features
+## 3. Output Classes
 
-- **Deep Learning-Based Damage Prediction:**  
-  Utilizes CNNs and transfer learning for accurate damage prediction.
+The model predicts one of the following classes:
 
-- **Model Experimentation:**  
-  Compares different approaches (baseline CNN, regularized CNN, EfficientNet, ResNet) with detailed performance metrics.
-
-- **Hyperparameter Tuning:**  
-  Optimizes the ResNet model with the best parameters (Dropout Rate: 0.2, Learning Rate: 0.005) for enhanced accuracy.
-
-- **Interactive Web Interface:**  
-  A Streamlit web app allows users to upload images and get real-time damage predictions.
-
+- `Front Breakage`
+- `Front Crushed`
+- `Front Normal`
+- `Rear Breakage`
+- `Rear Crushed`
+- `Rear Normal`
 
 
 ## 4. Installation Instructions
