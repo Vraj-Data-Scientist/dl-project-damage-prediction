@@ -1,59 +1,32 @@
-Car Damage Prediction
 # DL Project Damage Prediction
 
-This repository demonstrates a deep learning approach for damage prediction using various convolutional neural network (CNN) architectures and transfer learning techniques. The experiments in this project explore different models and techniques, culminating in a fine-tuned ResNet model with improved accuracy.
+This project implements a **Deep Learning Damage Prediction Model** that predicts the extent of damage (e.g., car damage) using convolutional neural networks (CNNs) and transfer learning techniques. The project explores multiple model architectures—from a baseline CNN to advanced transfer learning approaches—culminating in a fine-tuned ResNet model that achieved an accuracy of **80.87%**.
 
-## Project Overview
+## 1. Project Overview
 
-The project follows these steps:
+The model development process followed these steps:
 
-1. **Load the Dataset**  
-   The dataset is loaded and preprocessed to serve as input for training.
+- **Data Loading & Preprocessing:**  
+  The dataset is loaded and preprocessed for model training.
 
-2. **Baseline CNN**  
-   - A simple CNN model was implemented.  
-   - **Accuracy Achieved:** 57.74%
+- **Baseline CNN:**  
+  A simple CNN model was implemented, achieving an accuracy of **57.74%**.
 
-3. **CNN with Regularization**  
-   - Regularization techniques were applied to the baseline CNN to address overfitting.  
-   - **Accuracy Achieved:** 50.43%
+- **CNN with Regularization:**  
+  Applying regularization techniques resulted in an accuracy of **50.43%**.
 
-4. **Transfer Learning with EfficientNet**  
-   - EfficientNet was used for transfer learning to leverage pre-trained features.  
-   - **Accuracy Achieved:** 65.74%
+- **Transfer Learning with EfficientNet:**  
+  Leveraging EfficientNet improved the accuracy to **65.74%**.
 
-5. **ResNet Fine-Tuning**  
-   - A pre-trained ResNet model was fine-tuned for the task.  
-   - **Accuracy Before Hyperparameter Tuning:** 76.70%
+- **ResNet Fine-Tuning:**  
+  A pre-trained ResNet model was fine-tuned, reaching an accuracy of **76.70%**.
 
-6. **Hyperparameter Tuning**  
-   - Hyperparameter tuning was performed in a separate notebook.  
-   - **Best Parameters Identified:**  
-     - Dropout Rate: **0.2**  
-     - Learning Rate: **0.005**
+- **Hyperparameter Tuning:**  
+  Using a separate notebook for hyperparameter tuning, the best parameters for the ResNet model were identified:  
+  - **Dropout Rate:** 0.2  
+  - **Learning Rate:** 0.005  
+  This tuning led to the final model accuracy of **80.87%**.
 
-7. **Final Model**  
-   - The final tuned ResNet model achieved an overall accuracy of **80.87%**.
+## 2. Project Structure
 
-## Repository Structure
-
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.8 or later
-- pip
-
-### Installation
-
-1. **Clone the Repository:**
-
-   ```bash
-   git clone https://github.com/Vraj-Data-Scientist/dl-project-damage-prediction.git
-   cd dl-project-damage-prediction/streamlit-app
-
-```bash
-pip install -r requirements.txt
-
-
+dl-project-damage-prediction/ ├── streamlit-app/ │ ├── app.py # Main Streamlit application file │ ├── model_helper.py # Helper functions for model loading and prediction │ ├── requirements.txt # Python dependencies for the project │ └── model/ │ └── saved_model.pth # Pre-trained model weights for ResNet ├── notebooks/ │ └── hyperparameter_tuning.ipynb # Notebook with hyperparameter tuning experiments └── README.md # Project documentation
