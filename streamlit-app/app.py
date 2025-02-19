@@ -1,5 +1,4 @@
-import os
-os.system("pip install -r streamlit-app/requirement.txt")
+
 
 
 import streamlit as st
